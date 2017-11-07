@@ -55,3 +55,9 @@ textarea{
 	border:none;
 	padding: 20px;
 }
+
+#fieldset {
+border:6px groove #ccc; /* Borde */
+background:#154360; /* Color de fondo */
+color:#000; /* Color del texto de todo el contenido */
+}
