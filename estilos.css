@@ -1,0 +1,57 @@
+﻿/*Importamos fuentes */
+@import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+body{
+	background: #154360;
+	font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6{
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+	letter-spacing: 1px;
+}
+
+form{
+	background: #2471A3;
+	border: black 3px solid;
+	width: 450px;
+	margin: auto;
+	padding: 15px 20px;
+	margin-top: 50px;
+	border-radius: 10px;
+}
+
+h2{
+	text-align: center;
+	margin:0;
+	font-size: 30px;
+	margin-bottom: 20px;
+}
+
+input, textarea{
+	width: 100%;
+	margin-bottom: 15px;
+	font-size: 15px;
+}
+
+textarea{
+	max-width: 100%;
+	min-height: 100px;
+	max-height: 200px;
+}
+/*Estilo que ocurrirá cuando pasemos el cursor por el botón*/
+#boton:hover{
+	cursor: pointer;
+	background: #fff;
+	color: #2471A3;
+}
+
+#boton{
+	width: 50%;
+	margin-left: 25%;
+	background: #154360;
+	color: #fff;
+	border:none;
+	padding: 20px;
+}
