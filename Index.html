@@ -1,45 +1,111 @@
 <!DOCTYPE html>
-<html>
 <head>
-	<title>INSTA_UTIM</title>
-	<meta charset="UTF-8">
-	<link rel="stylesheet" type="text/css" href="estilos.css">
+<title>Pagina Principal</title>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="estilos.css">
 </head>
 <body>
-	<div>
-	<ul>
-		<li><img style="float: left;" src="Imagenes/icono2.png" height="90" width="90" align="center" title="INSTA_UTIM"></li>
-  		<li><a href="Index.html"><h3>INSTA_UTIM</h3></a></li>
-  		<li><a href="Formulario.html"><h3>Nuevo</h3></a></li>
-	</ul>
-	</div>
-	<form>
-		<div align="left"><img src="Imagenes/user.png" alt="INSTA_UTIM" height="30" width="30">Ani_07</div>
-		<br>
-		<div align="center">
-		<a href="Verpost1.html"><img src="Imagenes/Ani.png" alt="Ani07" height="350" width="350"></a>
-		<br>
 
-		<div align="left"><img src="Imagenes/user.png" alt="INSTA_UTIM" height="30" width="30">F.miranda</div>
-		<br>
-		<div align="center">
-		<a href="Verpost2.html"><img src="Imagenes/Fidel.png" alt="F.miranda" height="350" width="350"></a>
-		<br>
+  <div class="hero-image">
+    <div class="hero-text">
+      <h1 style="font-size:50px">INSTA_UTIM</h1>
+      <p>Red Social de la UTIM</p>
+    </div>
+  </div>
 
-		<div align="left"><img src="Imagenes/user.png" alt="INSTA_UTIM" height="30" width="30">Jessyrios</div>
-		<br>
-		<div align="center">
-		<a href="Verpost3.html"><img src="Imagenes/Jessy.jpg" alt="Jessyrios" height="350" width="350"></a>
-		<br>
-	</form>
+<!-- Barra de menu !-->
+  <ul>
+    <li><a class="active" href="index.html">Inicio</a></li>
+    <li><a href="#miModal">Nuevo Post</a></li>
+  </ul>
+  <br>
 
-	<footer class="footer">
-		<div class="social">
-			<a href="https://www.facebook.com/mdcssanjeronimo/?fref=ts" class="icon-facebook"></a>
-			<a href="twitter.com" class="icon-twitter"></a>
-			<a href="youtube.com" class="icon-youtube"></a>
-		</div>
-		<font face="Comic Sanz" size="2" color="white"><p class="copy">&copy; INSTA_UTIM 2017 - Todos los derechos reservados</p></font>
-	</footer>
-</body>
+<!-- Posts Recientes -->
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="Imagenes/Ani.png" alt="Ani" style="width:100%">
+      <div class="container">
+        <div>
+          <h3>
+            <img src="Imagenes/user.png" style="width: 30px" hspace="7" class="alineadoTextoImagenCentro"> Ani_07 
+          </h3> 
+        </div>
+          <!--Titulo del post !-->
+          <p class="title">Graduación</p>
+          <!--Descrpcion corta del post !-->
+          <p>Graduación Generación 2015 - 2017</p>
+          <p>anamayretcj97@gmail.com</p>
+          <p><button class="button">Ver Post</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="Imagenes/Jessy.jpg" alt="Jessy" style="width:100%">
+      <div class="container">
+        <div>
+          <h3>
+            <img src="Imagenes/user.png" style="width: 30px" hspace="7" class="alineadoTextoImagenCentro"> JessyRíos  
+          </h3> 
+        </div>
+          <p class="title">Titulo del post</p>
+          <p>Descrpción del Contenido</p>
+          <p>Correo del dueño del post</p>
+          <p><button class="button">Ver Post</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="Imagenes/Fidel.png" alt="Fidel" style="width:100%">
+      <div class="container">
+        <div>
+          <h3>
+            <img src="Imagenes/user.png" style="width: 30px" hspace="7" class="alineadoTextoImagenCentro"> F.Miranda 
+          </h3> 
+        </div>
+          <p class="title">Titulo del post</p>
+          <p>Descrpción del Contenido</p>
+          <p>Correo del dueño del post</p>
+          <p><button class="button">Ver Post</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div id="footer">
+    <font face="Comic Sanz" size="4" color="black">
+      <p class="copy">&copy; INSTA_UTIM 2017 - Todos los derechos reservados</p>
+    </font>
+  </div>
+
+  <!--Formulario Crear Nuevo Post !-->
+
+  <div id="miModal" class="modal">
+  <div class="modal-contenido">
+    <form>
+      <h2 align="center">Nuevo Post</h2>
+      <label>Título:</label>
+      <br>
+      <input type="text" name="titulo" placeholder="Por favor, escriba el título">
+      <br>
+      <label>Descripción:</label>
+      <br>
+      <input type="text" name="descripcion" placeholder="Por favor, escriba la descripción">
+      <br>
+      <label>Imagen:</label>
+      <br>
+      <input type="file" name="imagen" id="boton">
+      <br>
+      <label>Contenido:</label>
+      <br>
+      <textarea id="textarea" name="contenido" placeholder="Por favor, escriba el contenido"></textarea>
+      <br>
+      <a href="Index.html"><input id="boton" type="button" value="Guardar"></a>
+      <a href="Index.html"><input id="boton" type="button" value="Cerrar"></a>
+    </form>
+  </div> 
+  </body>
 </html>

@@ -1,61 +1,70 @@
-﻿/*Importamos fuentes */
+/*Importamos fuentes */
 @import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
-body{
-	background: #154360;
-	font-family: 'Open Sans', sans-serif;
-}
-
 h1, h2, h3, h4, h5, h6{
-	font-family: 'Yanone Kaffeesatz', sans-serif;
-	letter-spacing: 1px;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  letter-spacing: 1px;
 }
 
-form{
-	background: #2471A3;
-	border: black 3px solid;
-	width: 450px;
-	margin: auto;
-	padding: 15px 20px;
-	margin-top: 50px;
-	border-radius: 10px;
+label{
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  letter-spacing: 4px;
 }
 
-h2{
-	text-align: center;
-	margin:0;
-	font-size: 30px;
-	margin-bottom: 20px;
+#footer{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+  height: 50px;  /* establece la altura del pie de página */
+  margin-top: -50px;  /* estas cifras tienen que ser opostas */
 }
 
-input, textarea{
-	width: 100%;
-	margin-bottom: 15px;
-	font-size: 15px;
+p{
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  letter-spacing: 1px;
 }
 
-textarea{
-	max-width: 100%;
-	min-height: 100px;
-	max-height: 200px;
-}
-/*Estilo que ocurrirá cuando pasemos el cursor por el botón*/
-#boton:hover{
-	cursor: pointer;
-	background: #fff;
-	color: #2471A3;
+
+/*Alineado del texto de la imagen*/
+img.alineadoTextoImagenCentro{
+  vertical-align: middle;
+  /* Ojo vertical-align: text-middle no existe*/
 }
 
-#boton{
-	width: 50%;
-	margin-left: 25%;
-	background: #154360;
-	color: #fff;
-	border:none;
-	padding: 20px;
+* {
+    box-sizing: border-box;
 }
 
+body, html{
+    box-sizing: border-box;
+    height: 100%;
+    margin: 0;
+}
+
+/*Hero Image */
+.hero-image {
+  background-image: url("Imagenes/icono.png");
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+}
+
+/* Barra de Navegacion */
 ul {
     list-style-type: none;
     margin: 0;
@@ -80,23 +89,119 @@ li a:hover {
     background-color: #111;
 }
 
-div.gallery {
-    margin: 5px;
-    border: 1px solid #ccc;
-    float: left;
-    width: 100px;
+/*Conoce al equipo */
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
-div.gallery:hover {
-    border: 1px solid #777;
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
 }
 
-div.gallery img {
+@media (max-width: 650px) {
+  .column {
     width: 100%;
-    height: auto;
+    display: block;
+  }
 }
 
-div.desc {
-    padding: 15px;
-    text-align: center;
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+/*Formulario Modal*/
+
+.modal-contenido{
+  background: #2471A3;
+  border: black 3px solid;
+  width: 450px;
+  margin: auto;
+  padding: 15px 20px;
+  margin-top: 50px;
+  border-radius: 10px;
+  position: relative;
+}
+.modal{
+  background-color: rgba(0,0,0,.8);
+  position:fixed;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  opacity:0;
+  pointer-events:none;
+}
+
+/* Madar a traer al formulario a mostrar */
+
+#miModal:target{
+  opacity:1;
+  pointer-events:auto;
+}
+
+/* Cajas de Texto */
+
+  input[type=text]{
+      width: 100%; 
+      padding: 5px;
+      font-size: 1.0em;
+      font-family: 'Yanone Kaffeesatz', sans-serif;
+      border-radius: 5px;
+      background: rgba(0, 0, 0, 0.07);
+}
+
+#textarea{
+  width: 100%; 
+  padding: 5px;
+  font-size: 1.0em;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0.07);
+}
+
+#boton {
+      font-size: 1em;
+      border-radius: 8px;
+      padding: 10px;
+      border: 1px solid #59B969;
+      box-shadow: 0 1px 0 0 #60BD49 inset;
+      @include linear-gradient(#63E651, #42753E);
+}
+
+/* Color en el placeHolder*/
+::-webkit-input-placeholder { 
+  color: black;
 }
