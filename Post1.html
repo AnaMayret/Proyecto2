@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="estilos.css">
+</head>
+<body>
+
+<!-- Imagen del Header !-->
+  <div class="hero-image">
+    <div class="hero-text">
+      <h1 style="font-size:50px">INSTA_UTIM</h1>
+      <p>Red Social de la UTIM</p>
+    </div>
+  </div>
+
+
+<!-- Barra de menu !-->
+  <ul>
+    <li><a class="active" href="index.html">Inicio</a></li>
+    <li><a href="#">Nuevo Post</a></li>
+    <li><a href="#">Acerca de:</a></li>
+  </ul>
+
+<!-- Abrir Post en una ventana emergente !-->
+<form id="forms" align="center">
+	<div class="Ti_Post">
+		<h2>Graduación</h2>
+	</div>
+	<div class="Ima_Post">
+    	<img src="Imagenes/Ani.png" style="width: 100%" border="2"> 
+	</div>
+    <div class="descrpcion">
+    	<h3>Descripción del post</h3>
+    </div>
+    <!-- Comentarios !-->
+    <fieldset id="container">
+    	<div class="Comentarios"  id="comments">
+    		<div class="Autor" style="float: left;">
+    			<h3>
+            		<img src="Imagenes/user.png" style="width: 30px" hspace="7" class="alineadoTextoImagenCentro"> F.Miranda 
+          		</h3>
+    		</div>
+    		<div class="Comentario">
+    			<p>Este es un primer comentario</p>
+    		</div>
+    	</div>
+    	<div id="commentBox">
+    	<form id="postComment">
+    		<textarea name="comentarios" rows="5" cols="20" id="textarea">Escribe aquí tu comentario</textarea>
+    		<input type="button" id="boton" value="Enviar"></button>
+    	</form>
+    	</div>
+    </fieldset>
+</form>
+</body>
+</html>

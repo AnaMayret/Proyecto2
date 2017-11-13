@@ -28,6 +28,10 @@ p{
   letter-spacing: 1px;
 }
 
+/*Imagen esquinas Redondeadas */
+img {
+    border-radius: 8px;
+}
 
 /*Alineado del texto de la imagen*/
 img.alineadoTextoImagenCentro{
@@ -142,6 +146,17 @@ li a:hover {
   background-color: #555;
 }
 
+#forms{
+  background: #2471A3;
+  border: black 3px solid;
+  width: 450px;
+  margin: auto;
+  padding: 15px 20px;
+  margin-top: 50px;
+  border-radius: 10px;
+  position: relative;
+}
+
 /*Formulario Modal*/
 
 .modal-contenido{
@@ -164,8 +179,6 @@ li a:hover {
   opacity:0;
   pointer-events:none;
 }
-
-/* Madar a traer al formulario a mostrar */
 
 #miModal:target{
   opacity:1;
@@ -204,4 +217,40 @@ li a:hover {
 /* Color en el placeHolder*/
 ::-webkit-input-placeholder { 
   color: black;
+}
+
+/* Comentarios */
+
+#comments{
+  margin-top: 15px;
+  float: left;
+  width: 100%;
+  background: #edeff4;
+  overflow: auto;
+}
+
+#container{
+  background: #2471A3;
+  border: 0px;
+  overflow: auto;
+  width: 100%;
+}
+
+#commentBox{
+  background: #edeff4;
+  height: 100%;
+  overflow: hidden;
+  display: block;
+  padding: 10px;
+}
+
+#postComment input
+{
+  width: 100%;
+}
+
+#postComment .enviar
+{
+  clear: both;
+  float: left;
 }
